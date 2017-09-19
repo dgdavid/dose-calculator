@@ -5,5 +5,6 @@
     // disallow use of variables before they are defined
     // https://github.com/Intellicode/eslint-plugin-react-native/issues/22#issuecomment-232374361
     "no-use-before-define": 0,
+    "new-cap": 0
   }
 }
