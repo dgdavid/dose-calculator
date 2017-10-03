@@ -1,4 +1,4 @@
-package com.dosecalculator;
+package com.dgdavid.dosecalculator;
 
 import com.facebook.react.ReactActivity;
 
