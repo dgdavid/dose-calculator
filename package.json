@@ -8,11 +8,11 @@
     "lint": "eslint . --ext .js,.jsx"
   },
   "dependencies": {
-    "date-fns": "^1.28.5",
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.48.2",
-    "react-native-modal-datetime-picker": "^4.11.0",
-    "react-navigation": "^1.0.0-beta.11"
+    "date-fns": "1.29",
+    "react": "16.2.0",
+    "react-native": "0.52-RC",
+    "react-native-modal-datetime-picker": "^4.13.0",
+    "react-navigation": "^1.0.0-beta.22"
   },
   "devDependencies": {
     "babel-jest": "21.0.2",
