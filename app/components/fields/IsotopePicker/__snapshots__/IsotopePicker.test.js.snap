@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={undefined}
+>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "Technetium 99m",
+          "textColor": undefined,
+          "value": "technetium-99m",
+        },
+        Object {
+          "label": "Iodine 131",
+          "textColor": undefined,
+          "value": "iodine-131",
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

@@ -1,17 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Picker } from 'react-native';
 
-function IsotopePicker(props) {
-  const { isotopes, ...receivedProps } = props;
+import isotopes from '../../../data/isotopes';
 
+function IsotopePicker(props) {
   return (
-    <Picker {...receivedProps}>
+    <Picker {...props}>
       {
-        Object.keys(isotopes).map((key) =>
-          <Picker.Item label={isotopes[key].name} value={key} key={key} />)
+        Object.keys(props.isotopes).map((key) =>
+          <Picker.Item label={props.isotopes[key].name} value={key} key={key} />)
       }
     </Picker>
   );
 }
+
+IsotopePicker.propTypes = {
+  isotopes: PropTypes.object,
+};
+
+IsotopePicker.defaultProps = {
+  isotopes,
+};
 
 export default IsotopePicker;

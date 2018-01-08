@@ -48,7 +48,6 @@ class Calculator extends React.Component {
       <View style={styles.container}>
         <Text style={styles.label}>Isotope</Text>
         <IsotopePicker
-          isotopes={isotopes}
           selectedValue={this.state.isotopeKey}
           prompt="Select Isotope"
           style={{ padding: 0 }}
