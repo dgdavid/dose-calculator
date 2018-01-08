@@ -1,6 +1,11 @@
 {
-  "extends": "cooperka/react-native",
-
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "cooperka/react-native",
+    "plugin:jest/recommended"
+  ],
   "rules": {
     // disallow use of variables before they are defined
     // https://github.com/Intellicode/eslint-plugin-react-native/issues/22#issuecomment-232374361
