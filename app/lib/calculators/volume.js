@@ -8,7 +8,7 @@ import { differenceInHours } from 'date-fns';
  * @param {number} params.initialActivity
  * @param {number} params.desiredActivity
  * @param {number} params.inintialVolume
- * @param {object} params.isotope
+ * @param {Object} params.isotope
  *
  * @return {Object}
  * @property {datetime} calibrationDate
@@ -23,12 +23,12 @@ export default function volumeCalculator({
   initialVolume,
   isotope,
 }) {
-  const calculationDate = new Date();
+  const calculationDate = Date.now();
   const lambda = isotope.lambda;
   const hoursDifference = differenceInHours(calculationDate, calibrationDate);
   const currentActivity = initialActivity * Math.exp(-lambda * hoursDifference);
   const vialConcentration = currentActivity / initialVolume;
-  const neededVolume = desiredActivity / vialConcentration;
+  const neededVolume = Number((desiredActivity / vialConcentration).toFixed(1));
 
   return {
     calculationDate,
