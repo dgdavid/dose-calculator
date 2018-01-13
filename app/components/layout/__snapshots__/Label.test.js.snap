@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly setting \`toUpperCase\` to false 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 20,
+        "marginLeft": "5%",
+        "width": "90%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "borderBottomColor": "#A9A9A9",
+          "borderBottomWidth": 0.5,
+          "marginTop": 10,
+          "width": "90%",
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#FFF",
+          "fontSize": 10,
+          "marginLeft": 0,
+          "marginTop": -7.5,
+          "paddingLeft": 7.5,
+          "paddingRight": 7.5,
+        },
+        undefined,
+      ]
+    }
+  >
+    Label text rendered as is
+  </Text>
+</View>
+`;
+
+exports[`render correctly without props apart form required \`text\` 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 20,
+        "marginLeft": "5%",
+        "width": "90%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "borderBottomColor": "#A9A9A9",
+          "borderBottomWidth": 0.5,
+          "marginTop": 10,
+          "width": "90%",
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#FFF",
+          "fontSize": 10,
+          "marginLeft": 0,
+          "marginTop": -7.5,
+          "paddingLeft": 7.5,
+          "paddingRight": 7.5,
+        },
+        undefined,
+      ]
+    }
+  >
+    LABEL TEXT IN UPPERCASES BY DEFAULT
+  </Text>
+</View>
+`;
