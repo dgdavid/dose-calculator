@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly receiving the \`size\` prop 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "flex": 2,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`render correctly without \`size\` prop 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "flex": 2,
+      },
+    ]
+  }
+/>
+`;
