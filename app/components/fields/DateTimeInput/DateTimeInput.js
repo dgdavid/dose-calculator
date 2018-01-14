@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import { format as formatDate } from 'date-fns';
 
@@ -9,39 +10,72 @@ class DateTimeInput extends React.Component {
     super(props);
 
     this.state = {
-      isDateTimePickerVisible: false,
-    }
+      visible: false,
+    };
+
+    // bindings
+    this.show = this.show.bind(this);
+    this.hide = this.hide.bind(this);
+    this.handler = this.handler.bind(this);
   }
 
-  showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
+  show() {
+    this.setState({ visible: true });
+  }
 
-  hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
+  hide() {
+    this.setState({ visible: false });
+  }
 
-  handleDatePicked = (date) => {
-    if (this.props.onChange) {
-      this.props.onChange(date)
-    }
+  handler(date) {
+    this.props.onChange(date);
 
-    this.hideDateTimePicker();
+    this.hide();
   }
 
   render() {
-    const { value, format } = this.props;
-    const defaultFormat = 'MM/DD/YYYY HH:mm';
-    const formattedValue = formatDate(value, format || defaultFormat);
+    const { date, format } = this.props;
+    const formattedDate = formatDate(date, format);
 
     return (
-      <TouchableOpacity onPress={() => this.showDateTimePicker()}>
-        <Text>{formattedValue}</Text>
+      <TouchableOpacity onPress={() => this.show()}>
+        <Text style={styles.caption}>{formattedDate}</Text>
         <DateTimePicker
+          {...this.props}
           mode={'datetime'}
-          isVisible={this.state.isDateTimePickerVisible}
-          onConfirm={this.handleDatePicked}
-          onCancel={this.hideDateTimePicker}
+          isVisible={this.state.visible}
+          onConfirm={this.handler}
+          onCancel={this.hide}
         />
       </TouchableOpacity>
     );
   }
+
 }
+
+DateTimeInput.propTypes = {
+  format: PropTypes.string,
+  onChange: PropTypes.func,
+  date: DateTimePicker.propTypes.date,
+};
+
+DateTimeInput.defaultProps = {
+  format: 'MM/DD/YYYY · HH:mm',
+  onChange: () => {},
+  date: new Date(),
+};
+
+const colors = {
+  dimGray: '#6A6A6A',
+};
+
+const styles = StyleSheet.create({
+  caption: {
+    color: colors.dimGray,
+    fontSize: 30,
+    paddingTop: 5,
+    alignSelf: 'center',
+  },
+});
 
 export default DateTimeInput;
