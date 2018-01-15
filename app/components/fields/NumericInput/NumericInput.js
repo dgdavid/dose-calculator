@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
+import colors from '../../../config/colors';
+
 const NumericInput = ({ unit, unitStyle, style, ...props }) => {
   const textInputStyle = [
     styles.input,
@@ -31,10 +33,6 @@ NumericInput.propTypes = {
 NumericInput.defaultProps = {
   defaultValue: '0',
   unitStyle: null,
-};
-
-const colors = {
-  dimGray: '#696969',
 };
 
 const styles = StyleSheet.create({

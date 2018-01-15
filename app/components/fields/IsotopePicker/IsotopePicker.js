@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Picker, Text } from 'react-native';
 
 import isotopes from '../../../data/isotopes';
+import colors from '../../../config/colors';
 
 const IsotopePickerOptions = Object.keys(isotopes).map((key) => (
   <Picker.Item
@@ -30,10 +31,6 @@ IsotopePicker.propTypes = {
 
 IsotopePicker.defaultProps = {
   prompt: 'Select isotope',
-};
-
-const colors = {
-  dimGray: '#6A6A6A',
 };
 
 const styles = {

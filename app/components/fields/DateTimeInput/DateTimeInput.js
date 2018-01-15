@@ -4,6 +4,8 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import { format as formatDate } from 'date-fns';
 
+import colors from '../../../config/colors';
+
 class DateTimeInput extends React.Component {
 
   constructor(props) {
@@ -63,10 +65,6 @@ DateTimeInput.defaultProps = {
   format: 'MM/DD/YYYY · HH:mm',
   onChange: () => {},
   date: new Date(),
-};
-
-const colors = {
-  dimGray: '#6A6A6A',
 };
 
 const styles = StyleSheet.create({

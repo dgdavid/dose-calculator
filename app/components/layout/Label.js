@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, StyleSheet, View } from 'react-native';
 
+import colors from '../../config/colors';
+
 const Label = ({ text, textStyle, wrapperStyle, lineStyle, toUpperCase }) => (
   <View style={[styles.wrapper, wrapperStyle]}>
     <View style={[styles.line, lineStyle]} />
@@ -21,11 +23,6 @@ Label.propTypes = {
 
 Label.defaultProps = {
   toUpperCase: true,
-};
-
-const colors = {
-  white: '#FFF',
-  darkGray: '#A9A9A9',
 };
 
 const styles = StyleSheet.create({

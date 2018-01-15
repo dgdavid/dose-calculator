@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignSelf": "center",
-        "color": "#6A6A6A",
+        "color": "#696969",
         "fontSize": 30,
         "paddingTop": 5,
       }

@@ -18,9 +18,10 @@ exports[`render correctly 1`] = `
     style={
       Array [
         Object {
-          "alignSelf": "center",
           "color": "#696969",
           "fontSize": 40,
+          "paddingBottom": 0,
+          "textAlign": "center",
         },
         undefined,
       ]
@@ -31,6 +32,7 @@ exports[`render correctly 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    style={null}
   >
     ml
   </Text>
