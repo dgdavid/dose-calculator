@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "borderWidth": 0,
+    }
+  }
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -16,7 +22,7 @@ Array [
     }
   >
     Select isotope
-  </Text>,
+  </Text>
   <View
     style={
       Object {
@@ -55,6 +61,6 @@ Array [
         ]
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
