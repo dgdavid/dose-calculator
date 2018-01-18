@@ -1,8 +1,9 @@
 import { StackNavigator } from 'react-navigation';
-import HomeScreen from './screens/Home';
+
+import VolumeCalculator from './screens/VolumeCalculator';
 
 const DoseCalculator = StackNavigator({
-  Home: { screen: HomeScreen },
+  Home: { screen: VolumeCalculator },
 });
 
 export default DoseCalculator;
