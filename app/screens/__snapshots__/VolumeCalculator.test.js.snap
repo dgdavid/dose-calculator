@@ -1,24 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Array [
         undefined,
         Object {
-          "flex": 0.2,
+          "flex": 0.3,
           "flexDirection": "row",
         },
       ]
     }
-  />,
+  />
   <View
     style={
       Array [
         undefined,
         Object {
-          "flex": 0.9,
+          "flex": 1,
           "flexDirection": "row",
         },
       ]
@@ -51,14 +58,12 @@ Array [
             Array [
               Object {
                 "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
+                "borderBottomColor": "#BDBDBD",
                 "borderBottomWidth": 0.5,
                 "marginTop": 10,
                 "width": "90%",
               },
-              Object {
-                "width": "50%",
-              },
+              undefined,
             ]
           }
         />
@@ -78,6 +83,16 @@ Array [
                 "paddingRight": 7.5,
               },
               undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
             ]
           }
         >
@@ -98,7 +113,7 @@ Array [
           style={
             Object {
               "alignSelf": "center",
-              "color": "#696969",
+              "color": "#607D8B",
               "fontSize": 30,
               "paddingTop": 5,
             }
@@ -147,734 +162,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-  <View
-    style={
-      Array [
-        undefined,
-        Object {
-          "flex": 0.9,
-          "flexDirection": "row",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          undefined,
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          CALIBRATION DATE
-        </Text>
-      </View>
-    </View>
-  </View>,
-  <View
-    style={
-      Array [
-        undefined,
-        Object {
-          "flex": 0.2,
-          "flexDirection": "row",
-        },
-      ]
-    }
-  />,
-  <View
-    style={
-      Array [
-        undefined,
-        Object {
-          "flex": 2,
-          "flexDirection": "row",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "borderRightColor": "#CCC",
-            "borderRightWidth": 0.5,
-          },
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          INITIAL ACTIVITY
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={null}
-        >
-          mci
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          undefined,
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          INITIAL VOLUME
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={null}
-        >
-          ml
-        </Text>
-      </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#FF4500",
-            "fontSize": 10,
-          }
-        }
-      >
-        ⚠️
-         There is less volume than needed
-      </Text>
-    </View>
-  </View>,
-  <View
-    style={
-      Array [
-        undefined,
-        Object {
-          "flex": 2,
-          "flexDirection": "row",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "borderRightColor": "#CCC",
-            "borderRightWidth": 0.5,
-          },
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          DESIRED ACTIVITY
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={null}
-        >
-          mci
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          undefined,
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          NEEDED VOLUME
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={null}
-        >
-          ml
-        </Text>
-      </View>
-    </View>
-  </View>,
-  <View
-    style={
-      Array [
-        undefined,
-        Object {
-          "flex": 1.3,
-          "flexDirection": "row",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {
-            "borderRightColor": "#CCC",
-            "borderRightWidth": 0.5,
-          },
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          CURRENT ACTIVITY
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 20,
-              },
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 10,
-              "padding": 0,
-            }
-          }
-        >
-          mci
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          undefined,
-          Object {
-            "flex": 1,
-          },
-        ]
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "height": 20,
-              "marginLeft": "5%",
-              "width": "90%",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
-                "borderBottomWidth": 0.5,
-                "marginTop": 10,
-                "width": "90%",
-              },
-              undefined,
-            ]
-          }
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#FFF",
-                "fontSize": 10,
-                "marginLeft": 0,
-                "marginTop": -7.5,
-                "paddingLeft": 7.5,
-                "paddingRight": 7.5,
-              },
-              undefined,
-            ]
-          }
-        >
-          VIAL CONCENTRATION
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <TextInput
-          allowFontScaling={true}
-          defaultValue="0"
-          editable={false}
-          keyboardType="numeric"
-          selectTextOnFocus={true}
-          style={
-            Array [
-              Object {
-                "color": "#696969",
-                "fontSize": 40,
-                "paddingBottom": 0,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 20,
-              },
-            ]
-          }
-          underlineColorAndroid="transparent"
-        />
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 10,
-              "padding": 0,
-            }
-          }
-        >
-          ml
-        </Text>
-      </View>
-    </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -913,7 +201,818 @@ Array [
             Array [
               Object {
                 "alignSelf": "center",
-                "borderBottomColor": "#A9A9A9",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          CALIBRATION DATE
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 0.2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          INITIAL ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          INITIAL VOLUME
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mL
+        </Text>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "fontSize": 15,
+            }
+          }
+        >
+          ⚠️
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#FF5722",
+              "fontSize": 10,
+            }
+          }
+        >
+          There is less volume than needed
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          DESIRED ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          NEEDED VOLUME
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mL
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1.3,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          CURRENT ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 20,
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 10,
+              "padding": 0,
+            }
+          }
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          VIAL CONCENTRATION
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="0"
+          editable={false}
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 20,
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 10,
+              "padding": 0,
+            }
+          }
+        >
+          mL
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
                 "borderBottomWidth": 0.5,
                 "marginTop": 10,
                 "width": "90%",
@@ -958,6 +1057,6 @@ Array [
         Information about the calculation
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

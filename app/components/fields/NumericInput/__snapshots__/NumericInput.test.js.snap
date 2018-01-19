@@ -18,7 +18,7 @@ exports[`render correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "#696969",
+          "color": "#607D8B",
           "fontSize": 40,
           "paddingBottom": 0,
           "textAlign": "center",

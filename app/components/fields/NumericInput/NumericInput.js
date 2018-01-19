@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    color: colors.dimGray,
+    color: colors.materialBlueGray500,
     fontSize: 40,
     paddingBottom: 0,
     textAlign: 'center',

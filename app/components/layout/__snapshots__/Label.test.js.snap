@@ -18,7 +18,7 @@ exports[`render correctly setting \`toUpperCase\` to false 1`] = `
       Array [
         Object {
           "alignSelf": "center",
-          "borderBottomColor": "#A9A9A9",
+          "borderBottomColor": "#BDBDBD",
           "borderBottomWidth": 0.5,
           "marginTop": 10,
           "width": "90%",
@@ -43,6 +43,16 @@ exports[`render correctly setting \`toUpperCase\` to false 1`] = `
           "paddingRight": 7.5,
         },
         undefined,
+        Object {
+          "elevation": 1,
+          "shadowColor": "#212121",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 1,
+          },
+          "shadowOpacity": 0.9,
+          "shadowRadius": 2,
+        },
       ]
     }
   >
@@ -69,7 +79,7 @@ exports[`render correctly without props apart form required \`text\` 1`] = `
       Array [
         Object {
           "alignSelf": "center",
-          "borderBottomColor": "#A9A9A9",
+          "borderBottomColor": "#BDBDBD",
           "borderBottomWidth": 0.5,
           "marginTop": 10,
           "width": "90%",
@@ -94,6 +104,16 @@ exports[`render correctly without props apart form required \`text\` 1`] = `
           "paddingRight": 7.5,
         },
         undefined,
+        Object {
+          "elevation": 1,
+          "shadowColor": "#212121",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 1,
+          },
+          "shadowOpacity": 0.9,
+          "shadowRadius": 2,
+        },
       ]
     }
   >

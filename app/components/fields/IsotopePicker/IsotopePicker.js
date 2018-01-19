@@ -43,7 +43,7 @@ const styles = {
   },
 
   prompt: {
-    color: colors.dimGray,
+    color: colors.materialBlueGray500,
     fontSize: 30,
     paddingTop: 5,
     alignSelf: 'center',

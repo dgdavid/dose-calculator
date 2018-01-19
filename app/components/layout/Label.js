@@ -4,14 +4,21 @@ import { Text, StyleSheet, View } from 'react-native';
 
 import colors from '../../config/colors';
 
-const Label = ({ text, textStyle, wrapperStyle, lineStyle, toUpperCase }) => (
-  <View style={[styles.wrapper, wrapperStyle]}>
-    <View style={[styles.line, lineStyle]} />
-    <Text style={[styles.text, textStyle]}>
-      { toUpperCase ? text.toUpperCase() : text }
-    </Text>
-  </View>
-);
+const Label = ({ text, textStyle, wrapperStyle, lineStyle, toUpperCase, shadow }) => {
+  const textStyles = [styles.text, textStyle];
+  const formattedText = toUpperCase ? text.toUpperCase() : text;
+
+  if (shadow) {
+    textStyles.push(styles.shadow);
+  }
+
+  return (
+    <View style={[styles.wrapper, wrapperStyle]}>
+      <View style={[styles.line, lineStyle]} />
+      <Text style={textStyles}>{ formattedText }</Text>
+    </View>
+  );
+};
 
 Label.propTypes = {
   text: PropTypes.string.isRequired,
@@ -19,10 +26,12 @@ Label.propTypes = {
   textStyle: Text.propTypes.style,
   lineStyle: View.propTypes.style,
   toUpperCase: PropTypes.bool,
+  shadow: PropTypes.bool,
 };
 
 Label.defaultProps = {
   toUpperCase: true,
+  shadow: true,
 };
 
 const styles = StyleSheet.create({
@@ -34,7 +43,7 @@ const styles = StyleSheet.create({
 
   line: {
     alignSelf: 'center',
-    borderBottomColor: colors.darkGray,
+    borderBottomColor: colors.materialGray400,
     borderBottomWidth: 0.5,
     marginTop: 10,
     width: '90%',
@@ -48,6 +57,14 @@ const styles = StyleSheet.create({
     paddingRight: 7.5,
     alignSelf: 'center',
     backgroundColor: colors.white,
+  },
+
+  shadow: {
+    elevation: 1,
+    shadowColor: colors.materialGray900,
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.9,
+    shadowRadius: 2,
   },
 });
 

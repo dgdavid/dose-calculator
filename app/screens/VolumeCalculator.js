@@ -1,22 +1,22 @@
 import React, { Fragment } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import { Row, Column, Label } from '../components/layout';
 import { DateTimeInput, IsotopePicker, NumericInput } from '../components/fields';
 import colors from '../config/colors';
 
 export default () => (
-  <Fragment>
-    <Row size={0.2} />
+  <View style={styles.wrapper}>
+    <Row size={0.3} />
 
-    <Row size={0.9}>
+    <Row>
       <Column>
-        <Label text="Isotope" lineStyle={{ width: '50%' }} />
+        <Label text="Isotope" />
         <IsotopePicker prompt="Technetium 99m" />
       </Column>
     </Row>
 
-    <Row size={0.9}>
+    <Row>
       <Column>
         <Label text="Calibration Date" />
         <DateTimeInput />
@@ -28,25 +28,28 @@ export default () => (
     <Row size={2}>
       <Column style={styles.columnLeft}>
         <Label text="Initial activity" />
-        <NumericInput unit={'mci'} />
+        <NumericInput unit={'mCi'} />
       </Column>
 
       <Column>
         <Label text="Initial volume" />
-        <NumericInput unit={'ml'} />
-        <Text style={styles.warning}>{'\u26A0\uFE0F'} There is less volume than needed</Text>
+        <NumericInput unit={'mL'} />
+        <View>
+          <Text style={styles.warningEmoji}>{'\u26A0\uFE0F'}</Text>
+          <Text style={styles.warning}>There is less volume than needed</Text>
+        </View>
       </Column>
     </Row>
 
     <Row size={2}>
       <Column style={styles.columnLeft}>
         <Label text="Desired activity" />
-        <NumericInput unit={'mci'} />
+        <NumericInput unit={'mCi'} />
       </Column>
 
       <Column>
         <Label text="Needed volume" />
-        <NumericInput unit={'ml'} />
+        <NumericInput unit={'mL'} />
       </Column>
     </Row>
 
@@ -54,7 +57,7 @@ export default () => (
       <Column style={styles.columnLeft}>
         <Label text="Current activity" />
         <NumericInput
-          unit={'mci'}
+          unit={'mCi'}
           style={styles.smallNumber}
           unitStyle={styles.smallUnit}
         />
@@ -64,7 +67,7 @@ export default () => (
         <Label text="Vial concentration" />
         <NumericInput
           editable={false}
-          unit={'ml'}
+          unit={'mL'}
           style={styles.smallNumber}
           unitStyle={styles.smallUnit}
         />
@@ -73,16 +76,24 @@ export default () => (
 
     <Row>
       <Column>
-        <Label text="·" />
+        <Label
+          shadow={false}
+          text="·"
+        />
         <Text style={styles.info}>Information about the calculation</Text>
       </Column>
     </Row>
-  </Fragment>
+  </View>
 );
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+
   columnLeft: {
-    borderRightColor: colors.gray80,
+    borderRightColor: colors.materialGray400,
     borderRightWidth: 0.5,
   },
 
@@ -92,8 +103,13 @@ const styles = StyleSheet.create({
   },
 
   warning: {
-    color: colors.orangered,
+    color: colors.materialDeepOrange500,
     fontSize: 10,
+    alignSelf: 'center',
+  },
+
+  warningEmoji: {
+    fontSize: 15,
     alignSelf: 'center',
   },
 

@@ -69,7 +69,7 @@ DateTimeInput.defaultProps = {
 
 const styles = StyleSheet.create({
   caption: {
-    color: colors.dimGray,
+    color: colors.materialBlueGray500,
     fontSize: 30,
     paddingTop: 5,
     alignSelf: 'center',
