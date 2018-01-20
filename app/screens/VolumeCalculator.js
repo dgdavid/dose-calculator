@@ -16,6 +16,10 @@ class VolumeCalculator extends BaseCalculator {
             <Label text="Initial activity" />
             <NumericInput
               unit="mCi"
+              inputKey="initialActivity"
+              nextInput="initialVolume"
+              focusNext={this.focusInput}
+              saveRef={this.saveInputRef}
             />
           </Column>
 
@@ -23,6 +27,10 @@ class VolumeCalculator extends BaseCalculator {
             <Label text="Initial volume" />
             <NumericInput
               unit="mL"
+              inputKey="initialVolume"
+              nextInput="desiredActivity"
+              focusNext={this.focusInput}
+              saveRef={this.saveInputRef}
             />
             <View>
               <Text style={styles.warningEmoji}>{'\u26A0\uFE0F'}</Text>
@@ -36,6 +44,8 @@ class VolumeCalculator extends BaseCalculator {
             <Label text="Desired activity" />
             <NumericInput
               unit="mCi"
+              inputKey="desiredActivity"
+              saveRef={this.saveInputRef}
             />
           </Column>
 

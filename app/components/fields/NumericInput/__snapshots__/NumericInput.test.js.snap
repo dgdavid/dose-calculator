@@ -14,6 +14,7 @@ exports[`render correctly 1`] = `
     allowFontScaling={true}
     defaultValue="0"
     keyboardType="numeric"
+    onSubmitEditing={[Function]}
     selectTextOnFocus={true}
     style={
       Array [
@@ -24,6 +25,7 @@ exports[`render correctly 1`] = `
           "textAlign": "center",
         },
         undefined,
+        false,
       ]
     }
     underlineColorAndroid="transparent"

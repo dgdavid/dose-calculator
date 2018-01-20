@@ -10,8 +10,31 @@ class BaseCalculator extends React.Component {
   constructor(props) {
     super(props);
 
+    this.textInputs = {};
+
     // bindings
     this.fields = this.fields.bind(this); // must be implemented by children
+    this.saveInputRef = this.saveInputRef.bind(this);
+    this.focusInput = this.focusInput.bind(this);
+  }
+
+  /**
+   * Stores a input reference
+   *
+   * @params {string|number} id - input identifier
+   * @params {*} ref - TextInput reference
+   */
+  saveInputRef(id, ref) {
+    this.textInputs[id] = ref;
+  }
+
+  /**
+   * Set focus to input for given identifier
+   *
+   * @params {string|number} id - input identifier
+   */
+  focusInput(id) {
+    this.textInputs[id].focus();
   }
 
   render() {

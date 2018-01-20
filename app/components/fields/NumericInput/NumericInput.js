@@ -4,30 +4,29 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import colors from '../../../config/colors';
 
-const NumericInput = ({ unit, unitStyle, style, ...props }) => {
-  const textInputStyle = [
-    styles.input,
-    style,
-  ];
-
-  return (
-    <View style={styles.wrapper}>
-      <TextInput
-        selectTextOnFocus
-        underlineColorAndroid={'transparent'}
-        keyboardType={'numeric'}
-        style={textInputStyle}
-        {...props}
-      />
-      <Text style={unitStyle}>{unit}</Text>
-    </View>
-  );
-};
+const NumericInput = ({ inputKey, saveRef, nextInput, focusNext, unit, unitStyle, style, ...props }) => (
+  <View style={styles.wrapper}>
+    <TextInput
+      selectTextOnFocus
+      underlineColorAndroid="transparent"
+      keyboardType="numeric"
+      style={[styles.input, style, props.editable === false && styles.disabled]} // eslint-disable-line
+      ref={(input) => saveRef && saveRef(inputKey, input)}
+      onSubmitEditing={() => focusNext && focusNext(nextInput)}
+      {...props}
+    />
+    <Text style={unitStyle}>{unit}</Text>
+  </View>
+);
 
 NumericInput.propTypes = {
+  focusNext: PropTypes.func,
+  inputKey: PropTypes.string,
+  nextInput: PropTypes.string,
+  saveRef: PropTypes.func,
+  style: TextInput.propTypes.style,
   unit: PropTypes.string.isRequired,
   unitStyle: Text.propTypes.style,
-  style: TextInput.propTypes.style,
 };
 
 NumericInput.defaultProps = {
@@ -47,6 +46,10 @@ const styles = StyleSheet.create({
     fontSize: 40,
     paddingBottom: 0,
     textAlign: 'center',
+  },
+
+  disabled: {
+    color: colors.materialBlueGray300,
   },
 });
 
