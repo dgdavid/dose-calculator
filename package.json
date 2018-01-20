@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .js,.jsx"
   },
   "dependencies": {
-    "date-fns": "1.29",
+    "luxon": "^0.3.1",
     "react": "16.2.0",
     "react-native": "0.52-RC",
     "react-native-modal-datetime-picker": "^4.13.0",

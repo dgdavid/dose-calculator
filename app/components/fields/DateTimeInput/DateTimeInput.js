@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
-import { format as formatDate } from 'date-fns';
+import { DateTime } from 'luxon';
 
 import colors from '../../../config/colors';
 
@@ -36,8 +36,10 @@ class DateTimeInput extends React.Component {
   }
 
   render() {
-    const { date, format } = this.props;
-    const formattedDate = formatDate(date, format);
+    const { date, format, zone } = this.props;
+
+    const dt = DateTime.fromJSDate(date, { zone });
+    const formattedDate = dt.toLocaleString(format);
 
     return (
       <TouchableOpacity onPress={() => this.show()}>
@@ -56,15 +58,17 @@ class DateTimeInput extends React.Component {
 }
 
 DateTimeInput.propTypes = {
-  format: PropTypes.string,
+  format: PropTypes.object,
   onChange: PropTypes.func,
   date: DateTimePicker.propTypes.date,
+  zone: PropTypes.string,
 };
 
 DateTimeInput.defaultProps = {
-  format: 'MM/DD/YYYY · HH:mm',
+  format: DateTime.DATETIME_SHORT,
   onChange: () => {},
   date: new Date(),
+  zone: 'local',
 };
 
 const styles = StyleSheet.create({

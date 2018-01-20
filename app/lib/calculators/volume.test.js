@@ -1,6 +1,4 @@
-import startOfToday from 'date-fns/start_of_today';
-import subHours from 'date-fns/sub_hours';
-import addHours from 'date-fns/add_hours';
+import { DateTime } from 'luxon';
 
 import isotopes from '../../data/isotopes';
 import volumeCalculator from './volume';
@@ -9,7 +7,7 @@ describe('volumeCalculator', () => {
   const Tc99m = isotopes['technetium-99m'];
   const params = {
     isotope: Tc99m,
-    calibrationDate: startOfToday(),
+    calibrationDate: DateTime.local(),
     initialVolume: 10,
     initialActivity: 1450,
     desiredActivity: 300,
@@ -35,7 +33,7 @@ describe('volumeCalculator', () => {
   describe(`for 10ml of ${Tc99m.name} with 1450 mCi initial activty`, () => {
     Date.now = jest.fn(() => new Date(2018, 1, 8, 7, 30));
 
-    const now = Date.now();
+    const now = DateTime.fromJSDate(Date.now());
 
     describe('calibrated right now', () => {
       test('returns 2.1 ml of needed volume for 300 mCi desired activity', () => {
@@ -55,7 +53,7 @@ describe('volumeCalculator', () => {
       test('returns 2.9 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
           isotope: Tc99m,
-          calibrationDate: subHours(now, 3),
+          calibrationDate: now.minus({ hours: 3 }),
           initialActivity: 1450,
           initialVolume: 10,
           desiredActivity: 300,
@@ -69,7 +67,7 @@ describe('volumeCalculator', () => {
       test('returns 10 ml volume needed for 725 mCi desired activity', () => {
         const result = volumeCalculator({
           isotope: Tc99m,
-          calibrationDate: subHours(now, Tc99m.halfLife),
+          calibrationDate: now.minus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,
           desiredActivity: 725,
@@ -83,7 +81,7 @@ describe('volumeCalculator', () => {
       test('returns 1 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
           isotope: Tc99m,
-          calibrationDate: addHours(now, Tc99m.halfLife),
+          calibrationDate: now.plus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,
           desiredActivity: 300,
