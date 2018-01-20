@@ -39,7 +39,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    02/08/2018 · 07:30
+    02/08/2018 · 08:30
   </Text>
   <Modal
     animationType="none"
@@ -144,7 +144,7 @@ exports[`renders correctly 1`] = `
             style={undefined}
           >
             <RCTDatePicker
-              date={1518071400000}
+              date={1518075000000}
               locale={undefined}
               maximumDate={undefined}
               minimumDate={undefined}
