@@ -350,6 +350,7 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -360,6 +361,7 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               },
               undefined,
+              false,
             ]
           }
           underlineColorAndroid="transparent"
@@ -455,6 +457,7 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -465,6 +468,7 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               },
               undefined,
+              false,
             ]
           }
           underlineColorAndroid="transparent"
@@ -604,6 +608,7 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -614,6 +619,7 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               },
               undefined,
+              false,
             ]
           }
           underlineColorAndroid="transparent"
@@ -708,7 +714,9 @@ exports[`renders correctly 1`] = `
         <TextInput
           allowFontScaling={true}
           defaultValue="0"
+          editable={false}
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -719,6 +727,9 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               },
               undefined,
+              Object {
+                "color": "#90A4AE",
+              },
             ]
           }
           underlineColorAndroid="transparent"
@@ -828,7 +839,9 @@ exports[`renders correctly 1`] = `
         <TextInput
           allowFontScaling={true}
           defaultValue="0"
+          editable={false}
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -840,6 +853,9 @@ exports[`renders correctly 1`] = `
               },
               Object {
                 "fontSize": 20,
+              },
+              Object {
+                "color": "#90A4AE",
               },
             ]
           }
@@ -942,6 +958,7 @@ exports[`renders correctly 1`] = `
           defaultValue="0"
           editable={false}
           keyboardType="numeric"
+          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -953,6 +970,9 @@ exports[`renders correctly 1`] = `
               },
               Object {
                 "fontSize": 20,
+              },
+              Object {
+                "color": "#90A4AE",
               },
             ]
           }
