@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    Select isotope
+    Isotope 2
   </Text>
   <View
     style={
@@ -37,21 +37,21 @@ exports[`renders correctly 1`] = `
       items={
         Array [
           Object {
-            "label": "Technetium 99m",
+            "label": "Isotope 1",
             "textColor": undefined,
-            "value": "technetium-99m",
+            "value": "i1",
           },
           Object {
-            "label": "Iodine 131",
+            "label": "Isotope 2",
             "textColor": undefined,
-            "value": "iodine-131",
+            "value": "i2",
           },
         ]
       }
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      selectedIndex={0}
+      selectedIndex={1}
       style={
         Array [
           Object {
