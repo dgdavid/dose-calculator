@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, ViewPropTypes } from 'react-native';
 
 const Col = ({ size, style, children, ...props }) => {
   const styles = [
@@ -20,7 +20,7 @@ const Col = ({ size, style, children, ...props }) => {
 
 Col.propTypes = {
   size: PropTypes.number.isRequired,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   children: PropTypes.node,
 };
 

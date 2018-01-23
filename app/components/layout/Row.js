@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, ViewPropTypes } from 'react-native';
 
 const Row = ({ size, style, children, ...props }) => {
   const styles = [
@@ -20,7 +20,7 @@ const Row = ({ size, style, children, ...props }) => {
 
 Row.propTypes = {
   size: PropTypes.number.isRequired,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   children: PropTypes.node,
 };
 
