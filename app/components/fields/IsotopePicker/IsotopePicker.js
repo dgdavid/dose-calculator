@@ -5,6 +5,27 @@ import { Picker, Text, View } from 'react-native';
 import isotopes from '../../../data/isotopes';
 import colors from '../../../config/colors';
 
+/**
+ * NOTE: The Picker component seems to be full of bugs.
+ *
+ * Here, thanks to issues and comments found at Github, there is two of them fixed in a not ideal
+ * way:
+ *
+ * - To style prompt: building a custom one and positioning the picker out of the cutting edges of
+ *   it container, to make it "invisible".
+ *
+ *    > See https://github.com/facebook/react-native/issues/7817#issuecomment-264851951
+ *
+ * - To fire onValueChange event in the first element: adding "selectedValue" prop.
+ *
+ *   > See https://github.com/facebook/react-native/issues/17219 and related issues quoted in
+ *     first comment
+ *   > Also see https://github.com/facebook/react-native/issues/13351
+ *
+ *   Maybe it would a good idea to change this component to something like
+ *   `react-native-modal-selector`, but for now it will keep as is.
+ */
+
 const IsotopePickerOptions = Object.keys(isotopes).map((key) => (
   <Picker.Item
     label={isotopes[key].name}
@@ -13,12 +34,13 @@ const IsotopePickerOptions = Object.keys(isotopes).map((key) => (
   />
 ));
 
-const IsotopePicker = ({ prompt, ...props }) => (
+const IsotopePicker = ({ ...props }) => (
   <Fragment>
     <View style={styles.wrapper}>
-      <Text style={styles.prompt}>{prompt}</Text>
+      <Text style={styles.prompt}>{isotopes[props.isotope].name}</Text>
       <Picker
         style={styles.picker}
+        selectedValue={props.isotope} // see comments above
         {...props}
       >
         {IsotopePickerOptions}

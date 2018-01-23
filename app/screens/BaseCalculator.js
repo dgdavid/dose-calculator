@@ -45,7 +45,7 @@ class BaseCalculator extends React.Component {
         <Row>
           <Column>
             <Label text="Isotope" />
-            <IsotopePicker prompt="Technetium 99m" />
+            <IsotopePicker isotope="technetium-99m" />
           </Column>
         </Row>
 
