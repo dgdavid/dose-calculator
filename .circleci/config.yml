@@ -17,6 +17,8 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - run: sudo npm i -g codecov
+
       - checkout
 
       # Download and cache dependencies
@@ -34,4 +36,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: yarn test && codecov
