@@ -4,15 +4,14 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import colors from '../../../config/colors';
 
-const NumericInput = ({ inputKey, saveRef, nextInput, focusNext, unit, unitStyle, style, ...props }) => (
+const NumericInput = ({ unit, unitStyle, style, registerInput, ...props }) => (
   <View style={styles.wrapper}>
     <TextInput
       selectTextOnFocus
-      underlineColorAndroid="transparent"
       keyboardType="numeric"
+      underlineColorAndroid="transparent"
+      ref={(input) => registerInput && registerInput(input)}
       style={[styles.input, style, props.editable === false && styles.disabled]} // eslint-disable-line
-      ref={(input) => saveRef && saveRef(inputKey, input)}
-      onSubmitEditing={() => focusNext && focusNext(nextInput)}
       {...props}
     />
     <Text style={unitStyle}>{unit}</Text>
@@ -20,17 +19,13 @@ const NumericInput = ({ inputKey, saveRef, nextInput, focusNext, unit, unitStyle
 );
 
 NumericInput.propTypes = {
-  focusNext: PropTypes.func,
-  inputKey: PropTypes.string,
-  nextInput: PropTypes.string,
-  saveRef: PropTypes.func,
   style: TextInput.propTypes.style,
   unit: PropTypes.string.isRequired,
   unitStyle: Text.propTypes.style,
+  registerInput: PropTypes.func,
 };
 
 NumericInput.defaultProps = {
-  defaultValue: '0',
   unitStyle: null,
 };
 
