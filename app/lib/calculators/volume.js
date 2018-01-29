@@ -1,4 +1,5 @@
 import { DateTime } from 'luxon';
+import isotopes from '../../data/isotopes';
 
 /**
  * Calculate the hours difference between two dates
@@ -39,8 +40,9 @@ export default function volumeCalculator({
   initialVolume,
   isotope,
 }) {
+
   const calculationDate = new Date(Date.now());
-  const lambda = isotope.lambda;
+  const lambda = isotopes[isotope].lambda;
   const differenceInHours = hoursDifference(calibrationDate, calculationDate);
   const currentActivity = initialActivity * Math.exp(-lambda * differenceInHours);
   const vialConcentration = currentActivity / initialVolume;
@@ -48,8 +50,8 @@ export default function volumeCalculator({
 
   return {
     calculationDate,
-    currentActivity,
-    vialConcentration,
     neededVolume,
+    currentActivity: Number(currentActivity).toFixed(1),
+    vialConcentration: Number(vialConcentration).toFixed(1),
   };
 }

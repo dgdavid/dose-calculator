@@ -1,5 +1,4 @@
-import React from 'react';
-import { StatusBar, StyleSheet, Text } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import colors from './config/colors';

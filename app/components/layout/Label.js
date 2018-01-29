@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, ViewPropTypes } from 'react-native';
 
 import colors from '../../config/colors';
 
@@ -22,9 +22,9 @@ const Label = ({ text, textStyle, wrapperStyle, lineStyle, toUpperCase, shadow }
 
 Label.propTypes = {
   text: PropTypes.string.isRequired,
-  wrapperStyle: View.propTypes.style,
+  wrapperStyle: ViewPropTypes.style,
   textStyle: Text.propTypes.style,
-  lineStyle: View.propTypes.style,
+  lineStyle: ViewPropTypes.style,
   toUpperCase: PropTypes.bool,
   shadow: PropTypes.bool,
 };

@@ -6,7 +6,7 @@ import volumeCalculator from './volume';
 describe('volumeCalculator', () => {
   const Tc99m = isotopes['technetium-99m'];
   const params = {
-    isotope: Tc99m,
+    isotope: 'technetium-99m',
     calibrationDate: DateTime.local(),
     initialVolume: 10,
     initialActivity: 1450,
@@ -38,7 +38,7 @@ describe('volumeCalculator', () => {
     describe('calibrated right now', () => {
       test('returns 2.1 ml of needed volume for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: Tc99m,
+          isotope: 'technetium-99m',
           calibrationDate: now,
           initialActivity: 1450,
           initialVolume: 10,
@@ -52,7 +52,7 @@ describe('volumeCalculator', () => {
     describe('calibrated 3 hours ago', () => {
       test('returns 2.9 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: Tc99m,
+          isotope: 'technetium-99m',
           calibrationDate: now.minus({ hours: 3 }),
           initialActivity: 1450,
           initialVolume: 10,
@@ -66,7 +66,7 @@ describe('volumeCalculator', () => {
     describe('calibrated one half life (6.01h) ago', () => {
       test('returns 10 ml volume needed for 725 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: Tc99m,
+          isotope: 'technetium-99m',
           calibrationDate: now.minus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,
@@ -80,7 +80,7 @@ describe('volumeCalculator', () => {
     describe('calibrated one half life (6.01h) in the future', () => {
       test('returns 1 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: Tc99m,
+          isotope: 'technetium-99m',
           calibrationDate: now.plus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,

@@ -12,9 +12,7 @@ exports[`render correctly 1`] = `
 >
   <TextInput
     allowFontScaling={true}
-    defaultValue="0"
     keyboardType="numeric"
-    onSubmitEditing={[Function]}
     selectTextOnFocus={true}
     style={
       Array [

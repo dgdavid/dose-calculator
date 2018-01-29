@@ -135,21 +135,21 @@ exports[`renders correctly 1`] = `
             items={
               Array [
                 Object {
-                  "label": "Technetium 99m",
-                  "textColor": undefined,
-                  "value": "technetium-99m",
-                },
-                Object {
                   "label": "Iodine 131",
                   "textColor": undefined,
                   "value": "iodine-131",
+                },
+                Object {
+                  "label": "Technetium 99m",
+                  "textColor": undefined,
+                  "value": "technetium-99m",
                 },
               ]
             }
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            selectedIndex={0}
+            selectedIndex={1}
             style={
               Array [
                 Object {
@@ -350,7 +350,8 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
+          onEndEditing={[Function]}
+          returnKeyType="next"
           selectTextOnFocus={true}
           style={
             Array [
@@ -457,7 +458,8 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
+          onEndEditing={[Function]}
+          returnKeyType="next"
           selectTextOnFocus={true}
           style={
             Array [
@@ -480,35 +482,6 @@ exports[`renders correctly 1`] = `
           style={null}
         >
           mL
-        </Text>
-      </View>
-      <View>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "alignSelf": "center",
-              "fontSize": 15,
-            }
-          }
-        >
-          ⚠️
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "alignSelf": "center",
-              "color": "#FF5722",
-              "fontSize": 10,
-            }
-          }
-        >
-          There is less volume than needed
         </Text>
       </View>
     </View>
@@ -608,7 +581,7 @@ exports[`renders correctly 1`] = `
           allowFontScaling={true}
           defaultValue="0"
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
+          onEndEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -716,7 +689,6 @@ exports[`renders correctly 1`] = `
           defaultValue="0"
           editable={false}
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -841,7 +813,6 @@ exports[`renders correctly 1`] = `
           defaultValue="0"
           editable={false}
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -958,7 +929,6 @@ exports[`renders correctly 1`] = `
           defaultValue="0"
           editable={false}
           keyboardType="numeric"
-          onSubmitEditing={[Function]}
           selectTextOnFocus={true}
           style={
             Array [
@@ -989,7 +959,7 @@ exports[`renders correctly 1`] = `
             }
           }
         >
-          mL
+          mCi/mL
         </Text>
       </View>
     </View>
@@ -1063,19 +1033,6 @@ exports[`renders correctly 1`] = `
           ·
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "alignSelf": "center",
-            "padding": 10,
-          }
-        }
-      >
-        Information about the calculation
-      </Text>
     </View>
   </View>
 </View>
