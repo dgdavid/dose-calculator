@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from 'unistore/react';
 
 import actions from '../actions';
@@ -73,16 +73,16 @@ class VolumeCalculator extends React.Component {
   renderInformation() {
     if (this.props.calculationDate) {
       return (
-        <TouchableNativeFeedback
-          background={TouchableNativeFeedback.Ripple(colors.materialBlueGray500)}
-          borderless={true}
+        <TouchableOpacity
+          onPress={() => this.handleChange()}
         >
           <View>
             <Text style={styles.info}>
               Calculated at {formatDate(this.props.calculationDate)}
             </Text>
+            <Text style={styles.instructions}>Tap here to calculate again</Text>
           </View>
-        </TouchableNativeFeedback>
+        </TouchableOpacity>
       );
     }
 
@@ -220,9 +220,15 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    padding: 10,
+    padding: 8,
     alignSelf: 'center',
   },
+
+  instructions: {
+    alignSelf: 'center',
+    fontSize: 9,
+  },
+
   columnLeft: {
     borderRightColor: colors.materialGray400,
     borderRightWidth: 0.5,
