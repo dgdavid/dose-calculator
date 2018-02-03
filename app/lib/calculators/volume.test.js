@@ -1,12 +1,13 @@
 import { DateTime } from 'luxon';
 
-import isotopes from '../../data/isotopes';
 import volumeCalculator from './volume';
+import isotopes from '../../data/isotopes';
 
 describe('volumeCalculator', () => {
   const Tc99m = isotopes['technetium-99m'];
   const params = {
-    isotope: 'technetium-99m',
+    isotope: Tc99m,
+    calculationDate: DateTime.local(),
     calibrationDate: DateTime.local(),
     initialVolume: 10,
     initialActivity: 1450,
@@ -38,7 +39,8 @@ describe('volumeCalculator', () => {
     describe('calibrated right now', () => {
       test('returns 2.1 ml of needed volume for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: 'technetium-99m',
+          isotope: Tc99m,
+          calculationDate: now,
           calibrationDate: now,
           initialActivity: 1450,
           initialVolume: 10,
@@ -52,7 +54,8 @@ describe('volumeCalculator', () => {
     describe('calibrated 3 hours ago', () => {
       test('returns 2.9 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: 'technetium-99m',
+          isotope: Tc99m,
+          calculationDate: now,
           calibrationDate: now.minus({ hours: 3 }),
           initialActivity: 1450,
           initialVolume: 10,
@@ -66,7 +69,8 @@ describe('volumeCalculator', () => {
     describe('calibrated one half life (6.01h) ago', () => {
       test('returns 10 ml volume needed for 725 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: 'technetium-99m',
+          isotope: Tc99m,
+          calculationDate: now,
           calibrationDate: now.minus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,
@@ -80,7 +84,8 @@ describe('volumeCalculator', () => {
     describe('calibrated one half life (6.01h) in the future', () => {
       test('returns 1 ml volume needed for 300 mCi desired activity', () => {
         const result = volumeCalculator({
-          isotope: 'technetium-99m',
+          isotope: Tc99m,
+          calculationDate: now,
           calibrationDate: now.plus({ hours: Tc99m.halfLife }),
           initialActivity: 1450,
           initialVolume: 10,

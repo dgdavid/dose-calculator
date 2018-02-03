@@ -18,9 +18,10 @@ const hoursDifference = (left, right) => {
 };
 
 /**
- * Calculate needed volume in base input data
+ * Calculate needed volume based on input data
  *
  * @param {Object} params
+ * @param {datetime} params.calculationDate
  * @param {datetime} params.calibrationDate
  * @param {number} params.initialActivity
  * @param {number} params.desiredActivity
@@ -34,15 +35,14 @@ const hoursDifference = (left, right) => {
  * @property {number} neededVolume
  */
 export default function volumeCalculator({
+  calculationDate,
   calibrationDate,
   initialActivity,
   desiredActivity,
   initialVolume,
   isotope,
 }) {
-
-  const calculationDate = new Date(Date.now());
-  const lambda = isotopes[isotope].lambda;
+  const { lambda } = isotope;
   const differenceInHours = hoursDifference(calibrationDate, calculationDate);
   const currentActivity = initialActivity * Math.exp(-lambda * differenceInHours);
   const vialConcentration = currentActivity / initialVolume;

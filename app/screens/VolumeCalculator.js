@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { DateTime } from 'luxon';
 import { connect } from 'unistore/react';
 
 import actions from '../actions';
+import isotopes from '../data/isotopes';
 
 import colors from '../config/colors';
 import { formatDate } from '../lib/utils';
@@ -53,8 +55,14 @@ class VolumeCalculator extends React.Component {
 
 
   // FIXME: only do calculation if something changed
-  handleChange(data) {
-    this.props.calculateVolume(data);
+  handleChange(data = {}) {
+    const isotope = data.isotope ? isotopes[data.isotope] : this.props.isotope;
+
+    this.props.calculateVolume({
+      ...data,
+      isotope,
+      calculationDate: DateTime.local(),
+    });
   }
 
   renderWarning() {
