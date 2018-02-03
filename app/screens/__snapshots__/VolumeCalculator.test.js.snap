@@ -119,7 +119,7 @@ exports[`renders correctly 1`] = `
             }
           }
         >
-          Technetium 99m
+          Isotope 2
         </Text>
         <View
           style={
@@ -135,14 +135,14 @@ exports[`renders correctly 1`] = `
             items={
               Array [
                 Object {
-                  "label": "Iodine 131",
+                  "label": "Isotope 1",
                   "textColor": undefined,
-                  "value": "iodine-131",
+                  "value": "i1",
                 },
                 Object {
-                  "label": "Technetium 99m",
+                  "label": "Isotope 2",
                   "textColor": undefined,
-                  "value": "technetium-99m",
+                  "value": "i2",
                 },
               ]
             }

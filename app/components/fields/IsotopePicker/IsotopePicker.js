@@ -34,13 +34,13 @@ const IsotopePickerOptions = Object.keys(isotopes).map((key) => (
   />
 ));
 
-const IsotopePicker = ({ ...props }) => (
+const IsotopePicker = ({ isotope, ...props }) => (
   <Fragment>
     <View style={styles.wrapper}>
-      <Text style={styles.prompt}>{isotopes[props.isotope].name}</Text>
+      <Text style={styles.prompt}>{isotope.name}</Text>
       <Picker
         style={styles.picker}
-        selectedValue={props.isotope} // see comments above
+        selectedValue={isotope.id} // see comments above
         {...props}
       >
         {IsotopePickerOptions}
@@ -50,11 +50,11 @@ const IsotopePicker = ({ ...props }) => (
 );
 
 IsotopePicker.propTypes = {
-  prompt: PropTypes.string,
+  isotope: PropTypes.object,
 };
 
 IsotopePicker.defaultProps = {
-  prompt: 'Select isotope',
+  isotope: {},
 };
 
 const styles = {

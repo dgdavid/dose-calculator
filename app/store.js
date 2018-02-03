@@ -1,8 +1,10 @@
 import createStore from 'unistore';
 import { DateTime } from 'luxon';
 
+import isotopes from './data/isotopes';
+
 const initialState = {
-  isotope: 'technetium-99m',
+  isotope: isotopes['technetium-99m'],
   calibrationDate: DateTime.local().toJSDate(),
   initialActivity: 0,
   initialVolume: 0,
