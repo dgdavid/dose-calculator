@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { DateTime } from 'luxon';
 import { connect } from 'unistore/react';
 
@@ -7,10 +7,10 @@ import actions from '../actions';
 import isotopes from '../data/isotopes';
 
 import colors from '../config/colors';
-import { formatDate } from '../lib/utils';
 
 import { Row, Column, Label } from '../components/layout';
 import { DateTimeInput, IsotopePicker, NumericInput } from '../components/fields';
+import InformationButton from '../components/buttons/InformationButton';
 
 class VolumeCalculator extends React.Component {
 
@@ -72,25 +72,6 @@ class VolumeCalculator extends React.Component {
           <Text style={styles.warningEmoji}>{'\u26A0\uFE0F'}</Text>
           <Text style={styles.warning}>There is less volume than needed</Text>
         </View>
-      );
-    }
-
-    return null;
-  }
-
-  renderInformation() {
-    if (this.props.calculationDate) {
-      return (
-        <TouchableOpacity
-          onPress={() => this.handleChange()}
-        >
-          <View>
-            <Text style={styles.info}>
-              Calculated at {formatDate(this.props.calculationDate)}
-            </Text>
-            <Text style={styles.instructions}>Tap here to calculate again</Text>
-          </View>
-        </TouchableOpacity>
       );
     }
 
@@ -208,7 +189,10 @@ class VolumeCalculator extends React.Component {
               shadow={false}
               text="·"
             />
-            { this.renderInformation() }
+            <InformationButton
+              date={this.props.calculationDate}
+              onPress={this.handleChange}
+            />
           </Column>
         </Row>
       </View>

@@ -1,6 +1,1099 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly when \`calculationDate\` prop it is present 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 0.3,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          ISOTOPE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "borderWidth": 0,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#607D8B",
+              "fontSize": 30,
+              "paddingTop": 5,
+            }
+          }
+        >
+          Isotope 2
+        </Text>
+        <View
+          style={
+            Object {
+              "height": 1000,
+              "position": "absolute",
+              "top": 0,
+              "width": 1000,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "Isotope 1",
+                  "textColor": undefined,
+                  "value": "i1",
+                },
+                Object {
+                  "label": "Isotope 2",
+                  "textColor": undefined,
+                  "value": "i2",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={1}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          CALIBRATION DATE
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 0.2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          INITIAL ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          keyboardType="numeric"
+          onEndEditing={[Function]}
+          returnKeyType="next"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+              false,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          INITIAL VOLUME
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          keyboardType="numeric"
+          onEndEditing={[Function]}
+          returnKeyType="next"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+              false,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mL
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 2,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          DESIRED ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          keyboardType="numeric"
+          onEndEditing={[Function]}
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+              false,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          NEEDED VOLUME
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          editable={false}
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "#90A4AE",
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={null}
+        >
+          mL
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1.3,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRightColor": "#BDBDBD",
+            "borderRightWidth": 0.5,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          CURRENT ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          editable={false}
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 20,
+              },
+              Object {
+                "color": "#90A4AE",
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 10,
+              "padding": 0,
+            }
+          }
+        >
+          mCi
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+              Object {
+                "elevation": 1,
+                "shadowColor": "#212121",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.9,
+                "shadowRadius": 2,
+              },
+            ]
+          }
+        >
+          VIAL CONCENTRATION
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          defaultValue="undefined"
+          editable={false}
+          keyboardType="numeric"
+          selectTextOnFocus={true}
+          style={
+            Array [
+              Object {
+                "color": "#607D8B",
+                "fontSize": 40,
+                "paddingBottom": 0,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 20,
+              },
+              Object {
+                "color": "#90A4AE",
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 10,
+              "padding": 0,
+            }
+          }
+        >
+          mCi/mL
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 20,
+              "marginLeft": "5%",
+              "width": "90%",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderBottomColor": "#BDBDBD",
+                "borderBottomWidth": 0.5,
+                "marginTop": 10,
+                "width": "90%",
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#FFF",
+                "fontSize": 10,
+                "marginLeft": 0,
+                "marginTop": -7.5,
+                "paddingLeft": 7.5,
+                "paddingRight": 7.5,
+              },
+              undefined,
+            ]
+          }
+        >
+          ·
+        </Text>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "padding": 8,
+              }
+            }
+          >
+            Calculated at 
+            2018-1-31 17:50
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "fontSize": 9,
+              }
+            }
+          >
+            Tap here to calculate again
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders correctly whit default values 1`] = `
 <View
   style={
     Object {
