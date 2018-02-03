@@ -348,7 +348,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           keyboardType="numeric"
           onEndEditing={[Function]}
           returnKeyType="next"
@@ -456,7 +456,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           keyboardType="numeric"
           onEndEditing={[Function]}
           returnKeyType="next"
@@ -579,7 +579,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           keyboardType="numeric"
           onEndEditing={[Function]}
           selectTextOnFocus={true}
@@ -686,7 +686,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           editable={false}
           keyboardType="numeric"
           selectTextOnFocus={true}
@@ -810,7 +810,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           editable={false}
           keyboardType="numeric"
           selectTextOnFocus={true}
@@ -926,7 +926,7 @@ exports[`renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
-          defaultValue="0"
+          defaultValue="undefined"
           editable={false}
           keyboardType="numeric"
           selectTextOnFocus={true}

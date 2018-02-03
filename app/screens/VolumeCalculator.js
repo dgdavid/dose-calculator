@@ -1,30 +1,19 @@
-import React, { Fragment } from 'react';
-import { StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native';
-import { DateTime } from 'luxon';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { connect } from 'unistore/react';
 
-import calculateVolume from '../lib/calculators/volume';
-import { Row, Column, Label } from '../components/layout';
-import { DateTimeInput, IsotopePicker, NumericInput } from '../components/fields';
+import actions from '../actions';
 
 import colors from '../config/colors';
 import { formatDate } from '../lib/utils';
+
+import { Row, Column, Label } from '../components/layout';
+import { DateTimeInput, IsotopePicker, NumericInput } from '../components/fields';
 
 class VolumeCalculator extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      isotope: 'technetium-99m',
-      calibrationDate: DateTime.local().toJSDate(),
-      initialActivity: 0,
-      initialVolume: 0,
-      desiredActivity: 0,
-      neededVolume: 0,
-      currentActivity: 0,
-      vialConcentration: 0,
-      lessVolumeThanNeeded: false,
-    };
 
     this.registeredInputs = {};
 
@@ -34,13 +23,13 @@ class VolumeCalculator extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     // Only re-render if there are new values
     return [
       'neededVolume',
       'currentActivity',
       'vialConcentration',
-    ].some((prop) => this.state[prop] !== nextState[prop]);
+    ].some((prop) => this.props[prop] !== nextProps[prop]);
   }
 
   /**
@@ -65,14 +54,11 @@ class VolumeCalculator extends React.Component {
 
   // FIXME: only do calculation if something changed
   handleChange(data) {
-    const result = calculateVolume({ ...this.state, ...data });
-    const lessVolumeThanNeeded = this.state.initialVolume < result.neededVolume;
-
-    this.setState({ ...data, ...result, lessVolumeThanNeeded });
+    this.props.calculateVolume(data);
   }
 
   renderWarning() {
-    if (this.state.lessVolumeThanNeeded) {
+    if (this.props.lessVolumeThanNeeded) {
       return (
         <View>
           <Text style={styles.warningEmoji}>{'\u26A0\uFE0F'}</Text>
@@ -85,18 +71,18 @@ class VolumeCalculator extends React.Component {
   }
 
   renderInformation() {
-    if (this.state.calculationDate) {
+    if (this.props.calculationDate) {
       return (
-        <TouchableNativeFeedback
-          background={TouchableNativeFeedback.Ripple(colors.materialBlueGray500)}
-          borderless={true}
+        <TouchableOpacity
+          onPress={() => this.handleChange()}
         >
           <View>
             <Text style={styles.info}>
-              Calculated at {formatDate(this.state.calculationDate)}
+              Calculated at {formatDate(this.props.calculationDate)}
             </Text>
+            <Text style={styles.instructions}>Tap here to calculate again</Text>
           </View>
-        </TouchableNativeFeedback>
+        </TouchableOpacity>
       );
     }
 
@@ -112,7 +98,7 @@ class VolumeCalculator extends React.Component {
           <Column>
             <Label text="Isotope" />
             <IsotopePicker
-              isotope={this.state.isotope}
+              isotope={this.props.isotope}
               onValueChange={(isotope) => this.handleChange({ isotope })}
             />
           </Column>
@@ -122,7 +108,7 @@ class VolumeCalculator extends React.Component {
           <Column>
             <Label text="Calibration Date" />
             <DateTimeInput
-              date={this.state.calibrationDate}
+              date={this.props.calibrationDate}
               onChange={(calibrationDate) => this.handleChange({ calibrationDate })}
             />
           </Column>
@@ -136,7 +122,7 @@ class VolumeCalculator extends React.Component {
             <NumericInput
               unit="mCi"
               returnKeyType="next"
-              defaultValue={`${this.state.initialActivity}`}
+              defaultValue={`${this.props.initialActivity}`}
               registerInput={(input) => this.registerInput('initialActivity', input)}
               onEndEditing={(event) => {
                 this.handleChange({ initialActivity: event.nativeEvent.text });
@@ -150,7 +136,7 @@ class VolumeCalculator extends React.Component {
             <NumericInput
               unit="mL"
               returnKeyType="next"
-              defaultValue={`${this.state.initialVolume}`}
+              defaultValue={`${this.props.initialVolume}`}
               registerInput={(input) => this.registerInput('initialVolume', input)}
               onEndEditing={(event) => {
                 this.handleChange({ initialVolume: event.nativeEvent.text });
@@ -166,7 +152,7 @@ class VolumeCalculator extends React.Component {
             <Label text="Desired activity" />
             <NumericInput
               unit="mCi"
-              defaultValue={`${this.state.desiredActivity}`}
+              defaultValue={`${this.props.desiredActivity}`}
               registerInput={(input) => this.registerInput('desiredActivity', input)}
               onEndEditing={(event) => {
                 this.handleChange({ desiredActivity: event.nativeEvent.text });
@@ -179,7 +165,7 @@ class VolumeCalculator extends React.Component {
             <NumericInput
               unit="mL"
               editable={false}
-              defaultValue={`${this.state.neededVolume}`}
+              defaultValue={`${this.props.neededVolume}`}
             />
           </Column>
         </Row>
@@ -192,7 +178,7 @@ class VolumeCalculator extends React.Component {
               editable={false}
               style={styles.smallNumber}
               unitStyle={styles.smallUnit}
-              defaultValue={`${this.state.currentActivity}`}
+              defaultValue={`${this.props.currentActivity}`}
             />
           </Column>
 
@@ -203,7 +189,7 @@ class VolumeCalculator extends React.Component {
               editable={false}
               style={styles.smallNumber}
               unitStyle={styles.smallUnit}
-              defaultValue={`${this.state.vialConcentration}`}
+              defaultValue={`${this.props.vialConcentration}`}
             />
           </Column>
         </Row>
@@ -234,9 +220,15 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    padding: 10,
+    padding: 8,
     alignSelf: 'center',
   },
+
+  instructions: {
+    alignSelf: 'center',
+    fontSize: 9,
+  },
+
   columnLeft: {
     borderRightColor: colors.materialGray400,
     borderRightWidth: 0.5,
@@ -263,4 +255,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VolumeCalculator;
+const mapStateToProps = (state) => ({ ...state });
+
+export { VolumeCalculator }; // for tests purpuose
+
+export default connect(mapStateToProps, actions)(VolumeCalculator);
