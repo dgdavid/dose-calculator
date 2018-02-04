@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering nothing when visible is \`false\` 1`] = `null`;
+
+exports[`rendering nothing when visible is not given 1`] = `null`;
+
+exports[`renders correctly when visible is \`true\` 1`] = `
+Array [
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 15,
+      }
+    }
+  >
+    ⚠️
+  </Text>,
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#FF5722",
+        "fontSize": 10,
+      }
+    }
+  >
+    Example text for test \`Warning\`
+  </Text>,
+]
+`;
