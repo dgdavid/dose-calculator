@@ -53,7 +53,7 @@ out of curiosity :)
 He explained to me, with a lot of details, for what and why those calculations were necessary, why
 he wanted to have the best accurate dose, blah blah blah, and also told me that he was working in a
 Google Sheet to facilitate himself his work. Next weekend, I could not stop myself from making a
-small proof of concept<sup><a href="footnote-1">1</a>, <a href="footnote-2">2</a></sup> that later
+small proof of concept<sup><a href="#footnote-1">1</a>, <a href="#footnote-2">2</a></sup> that later
 became, progressively, in this small ~~application~~ *pet project* to start the development of an
 mobile application with [React Native](https://facebook.github.io/react-native/).
 
