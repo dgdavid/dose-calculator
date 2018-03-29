@@ -41,7 +41,7 @@ exports[`renders correctly when date is given 1`] = `
       }
     >
       Calculated at 
-      2018-1-31 17:50
+      1/31/2018, 5:50 PM
     </Text>
     <Text
       accessible={true}
