@@ -44,8 +44,10 @@ exports[`renders correctly 1`] = `
   <Modal
     animationType="none"
     hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
     onModalHide={[Function]}
     onRequestClose={[Function]}
+    swipeThreshold={100}
     transparent={true}
     visible={false}
   >
@@ -81,6 +83,7 @@ exports[`renders correctly 1`] = `
     />
     <View
       collapsable={undefined}
+      hideModalContentWhileAnimating={false}
       onModalHide={[Function]}
       pointerEvents="box-none"
       style={
@@ -95,6 +98,7 @@ exports[`renders correctly 1`] = `
           ],
         }
       }
+      swipeThreshold={100}
     >
       <View
         style={
@@ -148,7 +152,7 @@ exports[`renders correctly 1`] = `
               locale={undefined}
               maximumDate={undefined}
               minimumDate={undefined}
-              minuteInterval={undefined}
+              minuteInterval={1}
               mode="datetime"
               onChange={[Function]}
               onResponderTerminationRequest={[Function]}
@@ -233,6 +237,7 @@ exports[`renders correctly 1`] = `
             "borderRadius": 13,
             "height": 57,
             "justifyContent": "center",
+            "marginBottom": 0,
           }
         }
         testID={undefined}
