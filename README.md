@@ -23,7 +23,6 @@
 - [Background / Motivation](#background--motivation)
 - [Want to know more?](#want-to-know-more)
 - [Roadmap <small>(or simply "pending tasks")</small>](#roadmap-smallor-simply-pending-taskssmall)
-- [Notes](#notes)
 - [Build Process](#build-process)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -32,17 +31,24 @@
 
 ## Project status
 
-This is a **work in progress** project, which I am using to put in practice new things that I
-have learned (ideas, patterns, styles, etc), do/re-do stuff in small steps, test interesting
-packages, etc.
+:warning: This is a **no longer active** project which I was using to practice developing software
+with React Native. :warning:
 
-At the time of writing, there is not an official application available in neither of the two
+However, at the beginning of May 2018, I decided to not spend more time in this project because I am
+more interested to develop it as [PWA](https://en.wikipedia.org/wiki/Progressive_Web_Apps), since it
+probably is a better approach than building as a "native" application (at least for this case).
+
+~~This is a **work in progress** project, which I am using to put in practice new things that I
+have learned (ideas, patterns, styles, etc), do/re-do stuff in small steps, test interesting
+packages, etc.~~
+
+~~At the time of writing, there is not an official application available in neither of the two
 platforms targeted by [React Native](https://facebook.github.io/react-native/), Android or iOS. I
 hope to release it in a near future, at least the Android version which is the one that is being
-used for testing.
+used for testing.~~
 
-Meanwhile, if you are a developer or have enough knowledge for it, you can build it following the
-[Build process](#build-process) section.
+~~Meanwhile, if you are a developer or have enough knowledge for it, you can build it following the
+[Build process](#build-process) section.~~
 
 ## Background / Motivation
 
@@ -59,8 +65,8 @@ mobile application with [React Native](https://facebook.github.io/react-native/)
 
 ## Want to know more?
 
-If you are curious about the [theory behind it](docs/RADIOISOTOPES.md), do not hesitate to read the
-documentation.
+If you are curious about the theory behind it, do not hesitate to read [the
+documentation](docs/RADIOISOTOPES.md).
 
 ## Roadmap <small>(or simply "pending tasks")</small>
 
@@ -68,13 +74,13 @@ There is a lot of room for both, to have a complete, functional application and 
 progressively. In order to not pollute the README, I will put the roadmap in the
 [backlog](https://github.com/dgdavid/dose-calculator/projects/1).
 
-## Notes
-
-:sweat_smile: // TODO or DELETE section
-
 ## Build Process
 
-:sweat_smile: // TODO
+When the project was active, I was using a
+[modified/updated](https://github.com/dgdavid/dose-calculator/issues/31) version of [this Docker
+container](https://github.com/MaximeD/docker-react-native) to run the `react-native` command line (adding a couple alias in the host machine<sup><a href="#footnote-3"> 3</a></sup>)
+and build the project following steps from both, its own README and the [React Native - Running on
+device](https://facebook.github.io/react-native/docs/running-on-device.html) guide.
 
 ## License
 
@@ -97,3 +103,10 @@ document.
 href="https://www.linkedin.com/in/leroy-diaz">@leroydiazg</a> for a few months, until we had [an usable
 prototype](https://github.com/dgdavid/dose-calculator/commit/27ce9d0f9eff3c59bb465988f3f6bade9956b96b)
 of this project.</sub>
+
+<sub><sup id="footnote-3">3</sup> alias example:
+  <ul>
+    <li><sub>`react-native='path/to/docker-react-native/react-native.sh'`</sub></li>
+    <li><sub>`react-native-container='path/to/docker-react-native/react-native-container.sh'`</sub></li>
+  </ul>
+</sub>
