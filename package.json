@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx"
+    "lint": "eslint . --ext .js,.jsx",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "luxon": "1.2.1",
@@ -13,7 +15,8 @@
     "react-native": "~0.55.0",
     "react-native-modal-datetime-picker": "5.1.0",
     "react-navigation": "^2.0.0",
-    "unistore": "^3.0.4"
+    "unistore": "^3.0.4",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -35,5 +38,6 @@
     "preset": "react-native",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  }
+  },
+  "snyk": true
 }
